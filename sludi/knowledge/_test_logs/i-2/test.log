@@ -1,0 +1,640 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:retrofit:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 98, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:adapter-guava:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:adapter-java8:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 68, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:adapter-rxjava:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 56, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:adapter-rxjava2:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 56, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:adapter-scala:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 72, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-gson:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-guava:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-protobuf:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 75, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-jackson:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-java8:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 63, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-wire:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 62, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-simplexml:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-scalars:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 47, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-moshi:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:converter-jaxb:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 51, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:retrofit-mock:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-jar-plugin is missing. @ line 42, column 15
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.squareup.retrofit2:samples:jar:2.6.0
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-deploy-plugin is missing. @ line 70, column 15
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Detecting the operating system and CPU architecture
+[INFO] ------------------------------------------------------------------------
+[INFO] os.detected.name: windows
+[INFO] os.detected.arch: x86_64
+[INFO] os.detected.version: 10.0
+[INFO] os.detected.version.major: 10
+[INFO] os.detected.version.minor: 0
+[INFO] os.detected.classifier: windows-x86_64
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Retrofit (Parent)                                                  [pom]
+[INFO] Retrofit                                                           [jar]
+[INFO] Adapters                                                           [pom]
+[INFO] Adapter: Guava                                                     [jar]
+[INFO] Adapter: Java 8                                                    [jar]
+[INFO] Adapter: RxJava                                                    [jar]
+[INFO] Adapter: RxJava 2                                                  [jar]
+[INFO] Adapter: Scala                                                     [jar]
+[INFO] Converters                                                         [pom]
+[INFO] Converter: Gson                                                    [jar]
+[INFO] Converter: Guava                                                   [jar]
+[INFO] Converter: Protocol Buffers                                        [jar]
+[INFO] Converter: Jackson                                                 [jar]
+[INFO] Converter: Java 8                                                  [jar]
+[INFO] Converter: Wire Protocol Buffers                                   [jar]
+[INFO] Converter: SimpleXML                                               [jar]
+[INFO] Converter: Java Scalars                                            [jar]
+[INFO] Converter: Moshi                                                   [jar]
+[INFO] Converter: JAXB                                                    [jar]
+[INFO] Retrofit Mock Adapter                                              [jar]
+[INFO] Samples                                                            [jar]
+[INFO] 
+[INFO] -------------------< com.squareup.retrofit2:parent >--------------------
+[INFO] Building Retrofit (Parent) 2.6.0                                  [1/21]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ parent ---
+[INFO] 
+[INFO] --- animal-sniffer:1.14:check (default) @ parent ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.1
+[INFO] 
+[INFO] ------------------< com.squareup.retrofit2:retrofit >-------------------
+[INFO] Building Retrofit 2.6.0                                           [2/21]
+[INFO]   from retrofit\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ retrofit ---
+[INFO] 
+[INFO] --- kotlin:1.3.10:compile (compile) @ retrofit ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ retrofit ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ retrofit ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 50 source files to C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit\target\classes
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ retrofit ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ retrofit ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin:1.3.10:test-compile (test-compile) @ retrofit ---
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ retrofit ---
+[INFO] 
+[INFO] --------------< com.squareup.retrofit2:retrofit-adapters >--------------
+[INFO] Building Adapters 2.6.0                                           [3/21]
+[INFO]   from retrofit-adapters\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ retrofit-adapters ---
+[INFO] 
+[INFO] --- animal-sniffer:1.14:check (default) @ retrofit-adapters ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.1
+[INFO] 
+[INFO] ----------------< com.squareup.retrofit2:adapter-guava >----------------
+[INFO] Building Adapter: Guava 2.6.0                                     [4/21]
+[INFO]   from retrofit-adapters\guava\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ adapter-guava ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ adapter-guava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\guava\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ adapter-guava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ adapter-guava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\guava\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ adapter-guava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ adapter-guava ---
+[INFO] 
+[INFO] ----------------< com.squareup.retrofit2:adapter-java8 >----------------
+[INFO] Building Adapter: Java 8 2.6.0                                    [5/21]
+[INFO]   from retrofit-adapters\java8\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ adapter-java8 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ adapter-java8 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\java8\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ adapter-java8 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ adapter-java8 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\java8\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ adapter-java8 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ adapter-java8 ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:adapter-rxjava >----------------
+[INFO] Building Adapter: RxJava 2.6.0                                    [6/21]
+[INFO]   from retrofit-adapters\rxjava\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ adapter-rxjava ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ adapter-rxjava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\rxjava\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ adapter-rxjava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ adapter-rxjava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\rxjava\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ adapter-rxjava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ adapter-rxjava ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:adapter-rxjava2 >---------------
+[INFO] Building Adapter: RxJava 2 2.6.0                                  [7/21]
+[INFO]   from retrofit-adapters\rxjava2\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ adapter-rxjava2 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ adapter-rxjava2 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\rxjava2\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ adapter-rxjava2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ adapter-rxjava2 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\rxjava2\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ adapter-rxjava2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ adapter-rxjava2 ---
+[INFO] 
+[INFO] ----------------< com.squareup.retrofit2:adapter-scala >----------------
+[INFO] Building Adapter: Scala 2.6.0                                     [8/21]
+[INFO]   from retrofit-adapters\scala\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ adapter-scala ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ adapter-scala ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\scala\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ adapter-scala ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ adapter-scala ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-adapters\scala\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ adapter-scala ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ adapter-scala ---
+[INFO] 
+[INFO] -------------< com.squareup.retrofit2:retrofit-converters >-------------
+[INFO] Building Converters 2.6.0                                         [9/21]
+[INFO]   from retrofit-converters\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ retrofit-converters ---
+[INFO] 
+[INFO] --- animal-sniffer:1.14:check (default) @ retrofit-converters ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.1
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-gson >----------------
+[INFO] Building Converter: Gson 2.6.0                                   [10/21]
+[INFO]   from retrofit-converters\gson\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-gson ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-gson ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\gson\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-gson ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-gson ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\gson\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-gson ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-gson ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-guava >---------------
+[INFO] Building Converter: Guava 2.6.0                                  [11/21]
+[INFO]   from retrofit-converters\guava\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-guava ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-guava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\guava\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-guava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-guava ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\guava\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-guava ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-guava ---
+[INFO] 
+[INFO] -------------< com.squareup.retrofit2:converter-protobuf >--------------
+[INFO] Building Converter: Protocol Buffers 2.6.0                       [12/21]
+[INFO]   from retrofit-converters\protobuf\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-protobuf ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-protobuf ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\protobuf\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-protobuf ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- protobuf:0.6.1:test-compile (default) @ converter-protobuf ---
+[INFO] Compiling 1 proto file(s) to C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\protobuf\target\generated-test-sources\protobuf\java
+[WARNING] PROTOC: [libprotobuf WARNING google/protobuf/compiler/parser.cc:546] No syntax specified for the proto file: phone.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
+
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-protobuf ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\protobuf\src\test\resources
+[INFO] Copying 1 resource from src\test\protos to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-protobuf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\protobuf\target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-protobuf ---
+[INFO] 
+[INFO] --------------< com.squareup.retrofit2:converter-jackson >--------------
+[INFO] Building Converter: Jackson 2.6.0                                [13/21]
+[INFO]   from retrofit-converters\jackson\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-jackson ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-jackson ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\jackson\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-jackson ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-jackson ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\jackson\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-jackson ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-jackson ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-java8 >---------------
+[INFO] Building Converter: Java 8 2.6.0                                 [14/21]
+[INFO]   from retrofit-converters\java8\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-java8 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-java8 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\java8\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-java8 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-java8 ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\java8\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-java8 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-java8 ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-wire >----------------
+[INFO] Building Converter: Wire Protocol Buffers 2.6.0                  [15/21]
+[INFO]   from retrofit-converters\wire\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-wire ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-wire ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\wire\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-wire ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-wire ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\wire\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-wire ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-wire ---
+[INFO] 
+[INFO] -------------< com.squareup.retrofit2:converter-simplexml >-------------
+[INFO] Building Converter: SimpleXML 2.6.0                              [16/21]
+[INFO]   from retrofit-converters\simplexml\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-simplexml ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-simplexml ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\simplexml\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-simplexml ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-simplexml ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\simplexml\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-simplexml ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-simplexml ---
+[INFO] 
+[INFO] --------------< com.squareup.retrofit2:converter-scalars >--------------
+[INFO] Building Converter: Java Scalars 2.6.0                           [17/21]
+[INFO]   from retrofit-converters\scalars\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-scalars ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-scalars ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\scalars\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-scalars ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-scalars ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\scalars\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-scalars ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-scalars ---
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-moshi >---------------
+[INFO] Building Converter: Moshi 2.6.0                                  [18/21]
+[INFO]   from retrofit-converters\moshi\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-moshi ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-moshi ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\moshi\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-moshi ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-moshi ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\moshi\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-moshi ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-moshi ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running retrofit2.converter.moshi.MoshiConverterFactoryTest
+Sep 18, 2024 12:40:10 PM okhttp3.mockwebserver.MockWebServer$2 execute
+INFO: MockWebServer[65150] starting to accept connections
+Sep 18, 2024 12:40:10 PM okhttp3.mockwebserver.MockWebServer$3 processOneRequest
+INFO: MockWebServer[65150] received request: POST / HTTP/1.1 and responded: HTTP/1.1 200 OK
+Sep 18, 2024 12:40:10 PM okhttp3.mockwebserver.MockWebServer$2 acceptConnections
+INFO: MockWebServer[65150] done accepting connections: socket closed
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.355 s <<< FAILURE! -- in retrofit2.converter.moshi.MoshiConverterFactoryTest
+[ERROR] retrofit2.converter.moshi.MoshiConverterFactoryTest.failOnUnknown -- Time elapsed: 0.095 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting message:
+ <"Cannot skip unexpected NAME at $.">
+but was:
+ <"Cannot skip unexpected NAME at $.taco">
+	at retrofit2.converter.moshi.MoshiConverterFactoryTest.failOnUnknown(MoshiConverterFactoryTest.java:258)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:48)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   MoshiConverterFactoryTest.failOnUnknown:258 
+Expecting message:
+ <"Cannot skip unexpected NAME at $.">
+but was:
+ <"Cannot skip unexpected NAME at $.taco">
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ---------------< com.squareup.retrofit2:converter-jaxb >----------------
+[INFO] Building Converter: JAXB 2.6.0                                   [19/21]
+[INFO]   from retrofit-converters\jaxb\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ converter-jaxb ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ converter-jaxb ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\jaxb\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ converter-jaxb ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ converter-jaxb ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\jaxb\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ converter-jaxb ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ converter-jaxb ---
+[INFO] 
+[INFO] ----------------< com.squareup.retrofit2:retrofit-mock >----------------
+[INFO] Building Retrofit Mock Adapter 2.6.0                             [20/21]
+[INFO]   from retrofit-mock\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ retrofit-mock ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ retrofit-mock ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-mock\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ retrofit-mock ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ retrofit-mock ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-mock\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ retrofit-mock ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ retrofit-mock ---
+[INFO] 
+[INFO] -------------------< com.squareup.retrofit2:samples >-------------------
+[INFO] Building Samples 2.6.0                                           [21/21]
+[INFO]   from samples\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- enforcer:1.0:enforce (enforce-maven) @ samples ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ samples ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\samples\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:compile (default-compile) @ samples ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ samples ---
+[INFO] skip non existing resourceDirectory C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\samples\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.6.1:testCompile (default-testCompile) @ samples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.2:test (default-test) @ samples ---
+[INFO] No tests to run.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Retrofit (Parent) 2.6.0:
+[INFO] 
+[INFO] Retrofit (Parent) .................................. SUCCESS [  0.552 s]
+[INFO] Retrofit ........................................... FAILURE [  4.964 s]
+[INFO] Adapters ........................................... SUCCESS [  0.086 s]
+[INFO] Adapter: Guava ..................................... FAILURE [  0.025 s]
+[INFO] Adapter: Java 8 .................................... FAILURE [  0.022 s]
+[INFO] Adapter: RxJava .................................... FAILURE [  0.037 s]
+[INFO] Adapter: RxJava 2 .................................. FAILURE [  0.044 s]
+[INFO] Adapter: Scala ..................................... FAILURE [  0.025 s]
+[INFO] Converters ......................................... SUCCESS [  0.068 s]
+[INFO] Converter: Gson .................................... FAILURE [  0.027 s]
+[INFO] Converter: Guava ................................... FAILURE [  0.023 s]
+[INFO] Converter: Protocol Buffers ........................ FAILURE [  1.163 s]
+[INFO] Converter: Jackson ................................. FAILURE [  0.034 s]
+[INFO] Converter: Java 8 .................................. FAILURE [  0.020 s]
+[INFO] Converter: Wire Protocol Buffers ................... FAILURE [  0.027 s]
+[INFO] Converter: SimpleXML ............................... FAILURE [  0.030 s]
+[INFO] Converter: Java Scalars ............................ FAILURE [  0.021 s]
+[INFO] Converter: Moshi ................................... FAILURE [  0.714 s]
+[INFO] Converter: JAXB .................................... FAILURE [  0.026 s]
+[INFO] Retrofit Mock Adapter .............................. FAILURE [  0.025 s]
+[INFO] Samples ............................................ FAILURE [  0.022 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.237 s
+[INFO] Finished at: 2024-09-18T12:40:10+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project retrofit: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project adapter-guava: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project adapter-java8: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project adapter-rxjava: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project adapter-rxjava2: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project adapter-scala: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-gson: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-guava: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-protobuf: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-jackson: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-java8: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-wire: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-simplexml: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-scalars: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-moshi: There are test failures.
+[ERROR] 
+[ERROR] Please refer to C:\Dev\Snake\SLUDI\sludi\knowledge\_downloads\retrofit\retrofit-converters\moshi\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project converter-jaxb: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project retrofit-mock: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.2:test (default-test) on project samples: No tests matching pattern "MoshiConverterFactoryTest#failOnUnknown" were executed! (Set -Dsurefire.failIfNoSpecifiedTests=false to ignore this error.) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :retrofit
+[INFO] Build failures were ignored.

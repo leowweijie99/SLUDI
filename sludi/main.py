@@ -17,6 +17,7 @@ def parseArgs(argv):
 def main():
     opts = parseArgs(sys.argv[1:])
     incompatibilities.run(opts.id)
+    exit(0)
 
 if __name__ == "__main__":
     main()

@@ -83,7 +83,7 @@ def changeLibVersionOfOnePomFile(lib: str, lib_version: str, pom_file: str) -> N
     fw.close()
 
 
-def get_knowledge_json_data(id: str, file_path: str) -> dict | None:
+def get_knowledge_info(id: str, file_path: str) -> dict | None:
     """
     Reads a JSON file and searches for an object with the specified ID.
 
@@ -109,7 +109,7 @@ def get_knowledge_json_data(id: str, file_path: str) -> dict | None:
         print(f"Error decoding JSON in file: {file_path}")
 
 
-def write_knowledge_json_data(ci: dict, file_path: str = KNOWLEDGE_JSON_FILE) -> bool:
+def write_knowledge_info(ci: dict, file_path: str = KNOWLEDGE_JSON_FILE) -> bool:
     """
     Appends the given client info to a JSON file.
 
@@ -124,12 +124,13 @@ def write_knowledge_json_data(ci: dict, file_path: str = KNOWLEDGE_JSON_FILE) ->
         None
     """
     try:
-        with open(file_path, 'r') as fr:
-            clients_info = json.load(fr)
+        with open(file_path, 'r') as file:
+            clients_info = json.load(file)
     except FileNotFoundError as e:
         print(e)
+        exit(-1)
 
-    if get_knowledge_json_data(ci['id'], file_path) == None:
+    if get_knowledge_info(ci['id'], file_path) == None:
         clients_info.append(ci)
 
     for i in range(len(clients_info)):
@@ -145,23 +146,24 @@ def write_knowledge_json_data(ci: dict, file_path: str = KNOWLEDGE_JSON_FILE) ->
         print(f"Error processing file {file_path}: {e}")
         return False
 
-def search_for_file(id: str) -> str | None:
+def search_for_file(client: str, target_file_name: str) -> str | None:
     """
-    Searches for a file with a name matching the specified ID in the _downloads directory.
+    Searches for a specified file within a client's project directory under the _downloads directory.
 
-    This function looks up the target file name using the provided ID and checks if a file with that name exists 
-    in the _downloads directory. If the file is found, its full path is returned; otherwise, it returns None.
+    This function searches the directory tree of the specified client's project located in the 
+    `_downloads` directory, looking for a file that matches the given name. If the file is found, 
+    the full path to the file is returned. Else, `None` is returned.
 
     Args:
-        id (str): The identifier used to determine the target file name.
+        client (str): The name of the client directory within the `_downloads` directory.
+        target_file_name (str): The name of the file to search for.
 
     Returns:
-        str | None: The full path to the file if found, or None if the file is not found.
+        str | None: The full path to the target file if found, otherwise `None`.
     """
-    ci = get_knowledge_json_data(id, KNOWLEDGE_JSON_FILE)
-    target_file_name = ci['file_name']
     print(f"Searching for file: {target_file_name}..")
-    for root, dirs, files in os.walk(DOWNLOADS_DIR + '/' + ci['client']):
+    start_path = os.path.join(DOWNLOADS_DIR, client)
+    for root, dirs, files in os.walk(start_path):
         if target_file_name in files:
             return os.path.join(root, target_file_name)
     return None
@@ -193,3 +195,18 @@ def get_method_by_line_no(source: str, line_no: int) -> str:
                     method_lines = source.splitlines()[method.position.line - 1 : last_line+1]
                     return "\n".join(method_lines)
     return source.splitlines()[line_no-1]
+
+
+def get_code_from_source(client_info: dict) -> str:
+    file_path = search_for_file(client_info["client"], client_info["file_name"])
+    if not file_path:
+        return ""
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            lines = file.readlines()
+        source = "".join(lines)
+    except Exception as e:
+        print(e)
+        return ""
+    method_body = get_method_by_line_no(source, int(client_info["line_no"]))
+    return method_body if method_body else ""
