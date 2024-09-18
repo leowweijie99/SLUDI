@@ -198,6 +198,18 @@ def get_method_by_line_no(source: str, line_no: int) -> str:
 
 
 def get_code_from_source(client_info: dict) -> str:
+    """
+    Retrieves the method responsible for an exception based on the information in 'client_info'.
+
+    This function locates the Java file containing the source code, searches for the method that corresponds to the line number specified in 'client_info' and returns the method's code as a string.
+
+    Args:
+        client_info (dict): client information from knowledge.json.
+
+    Returns:
+        str: The source code of the method responsible for the exception.
+             Returns an empty string ("") if the method or file cannot be found.
+    """
     file_path = search_for_file(client_info["client"], client_info["file_name"])
     if not file_path:
         return ""

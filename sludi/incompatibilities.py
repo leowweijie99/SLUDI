@@ -1,6 +1,6 @@
 from utils import *
 
-TEST = False
+TEST_ENABLED = False
 
 def run(id: str) -> None:
     client_info = get_knowledge_info(id, INCOMPATIBILITIES_JSON_FILE)
@@ -17,22 +17,28 @@ def run(id: str) -> None:
             print("Invalid input. Please type 'test' or 'exit'.")
             continue
         
-        if TEST:
+        if TEST_ENABLED:
             test_success = test_upgrade_incompatibility(client_info)
             if test_success:
-                print("Test successfully passed, log saved.")
+                print("Test successful!.")
                 return
         
         extract_info(client_info)
         code = get_code_from_source(client_info)
         if code:
-            print(code)
+            print(f"{client_info['exception']}\n{client_info['exception_info']}\n{code.strip()}")
             send_AI = input("Send to AI to diagnose and resolve this issue? (Y/N): ")
+            if send_AI.strip() == "Y":
+                print(f"Sending to AI: '{code}'!")
+                continue
+            else:
+                print(f"Please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
         else:
-            print("Unable to automatically extract information..")
-            prompt = input("Enter prompt manually or 'exit' to quit: ")
-            if prompt == "exit":
-                break
+            print(f"Unable to automatically extract information, please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
+        prompt = input("Enter prompt manually or 'exit' to quit: ")
+        if prompt == "exit":
+            break   
+        print(f"Sending to AI: '{prompt}'!")
 
 
 def discover_client(client_info: dict) -> None:
@@ -86,6 +92,24 @@ def test_upgrade_incompatibility(client_info: dict) -> bool:
 
 
 def extract_info(client_info: dict) -> None:
+    """
+    Extracts key details about an exception from the provided client_info.
+
+    This function attempts to extract the following details from the test_log:
+        - Exception message
+        - Cause of the exception
+        - Java file where the exception occurred
+        - Line number where the exception occurred
+
+    If any of the information cannot be extracted, the fields are set to an empty string ("").
+
+    Args:
+        client_info (dict): A dictionary containing details about a client's exception, such as error logs.
+
+    Returns:
+        None: This function modifies the 'client_info' dictionary in place and does not return any value.
+
+    """
     print("Extracting Exception and Error Information...\n")
     client_info["exception"], client_info["exception_info"] = find_exception(client_info["id"])
     error_location = find_error_location(client_info['id'], client_info['test'].split('#')[0])
@@ -131,6 +155,3 @@ def find_error_location(id: str, test_name: str) -> str:
             line = line.strip().split("at ")[-1]
             if test_name in line.split('(')[1]:
                 return line
-
-# SO FAR, able to extract method body.
-# empty strings not fully handled
