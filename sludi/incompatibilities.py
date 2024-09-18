@@ -1,4 +1,5 @@
 from utils import *
+from services import openai_service
 
 TEST_ENABLED = False
 
@@ -30,6 +31,8 @@ def run(id: str) -> None:
             send_AI = input("Send to AI to diagnose and resolve this issue? (Y/N): ")
             if send_AI.strip() == "Y":
                 print(f"Sending to AI: '{code}'!")
+                response = openai_service.query(code)
+                print(response)
                 continue
             else:
                 print(f"Please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
