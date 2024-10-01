@@ -161,11 +161,11 @@ def search_for_file(client: str, target_file_name: str) -> str | None:
     Returns:
         str | None: The full path to the target file if found, otherwise `None`.
     """
-    print(f"Searching for file: {target_file_name}..")
     start_path = os.path.join(DOWNLOADS_DIR, client)
     for root, dirs, files in os.walk(start_path):
         if target_file_name in files:
             return os.path.join(root, target_file_name)
+    print(f"Unable to find file: {target_file_name}..")
     return None
 
 def get_method_by_line_no(source: str, line_no: int) -> str:
