@@ -1,7 +1,10 @@
 from utils import *
 from services import openai_service
+from services import anthropic_service
 
-TEST_ENABLED = False
+import subprocess
+
+TEST_ENABLED = True
 
 def run(id: str) -> None:
     client_info = get_knowledge_info(id, INCOMPATIBILITIES_JSON_FILE)
@@ -23,19 +26,25 @@ def run(id: str) -> None:
             if test_success:
                 print("Test successful!.")
                 return
-        
-        extract_info(client_info)
+        try:
+            extract_info(client_info)
+        except Exception as e:
+            print(e)
+            return
         code = get_code_from_source(client_info)
+        file_path = search_for_file(client_info["client"], client_info["file_name"])
         if code:
-            print(f"{client_info['exception']}\n{client_info['exception_info']}\n{code.strip()}")
+            query = f"{client_info['exception']}\n{client_info['exception_info']}\n{code.strip()}"
+            print(query)
             send_AI = input("Send to AI to diagnose and resolve this issue? (Y/N): ")
             if send_AI.strip() == "Y":
-                print(f"Sending to AI: '{code}'!")
-                response = openai_service.query(code)
-                print(response)
+                response = anthropic_service.query(query)
+                print('\n' + response)
+                subprocess.Popen(["notepad.exe", file_path])
                 continue
             else:
                 print(f"Please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
+                subprocess.Popen(["notepad.exe", file_path])
         else:
             print(f"Unable to automatically extract information, please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
         prompt = input("Enter prompt manually or 'exit' to quit: ")
