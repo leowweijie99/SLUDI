@@ -12,6 +12,7 @@ def run(id: str) -> None:
         print(f"Unable to find incompatibility id {id}..")
         return
     discover_client(client_info)
+    change_version = True
 
     while True:
         user_input = input("Type 'test' to run Maven test build or 'exit' to quit: ")
@@ -22,7 +23,7 @@ def run(id: str) -> None:
             continue
         
         if TEST_ENABLED:
-            test_success = test_upgrade_incompatibility(client_info)
+            test_success = test_upgrade_incompatibility(client_info, change_version)
             if test_success:
                 print("Test successful!.")
                 return
@@ -41,6 +42,7 @@ def run(id: str) -> None:
                 response = anthropic_service.query(query)
                 print('\n' + response)
                 subprocess.Popen(["notepad.exe", file_path])
+                change_version = False
                 continue
             else:
                 print(f"Please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
@@ -75,7 +77,7 @@ def discover_client(client_info: dict) -> None:
     write_knowledge_info(client_info)
     
 
-def test_upgrade_incompatibility(client_info: dict) -> bool:
+def test_upgrade_incompatibility(client_info: dict, change_version: bool) -> bool:
     id, client, lib, new, test = client_info['id'], client_info['client'], client_info['lib'], client_info['new'], client_info['test']
     submodule, test_cmd = client_info['submodule'], client_info['test_cmd']
     print(f"Running Test for Maven Project '{client}' with id: {id}...")
@@ -87,7 +89,8 @@ def test_upgrade_incompatibility(client_info: dict) -> bool:
         os.chdir(f"{DOWNLOADS_DIR}/{client}/{submodule}")
     sub.run(f"mvn test -fn -Drat.ignoreErrors=true -DtrimStackTrace=false -Dtest={test}", shell=True, stdout=open(os.devnull, 'w'), stderr=sub.STDOUT)
 
-    changeLibVersion(client, lib, new)
+    if change_version:
+        changeLibVersion(client, lib, new)
 
     if not os.path.isdir(f"{TEST_LOG_DIR}/{id}"):
         os.makedirs(f"{TEST_LOG_DIR}/{id}")
