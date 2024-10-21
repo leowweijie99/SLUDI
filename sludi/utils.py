@@ -3,6 +3,7 @@ import subprocess as sub
 import json
 import javalang
 import re
+import subprocess
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 TEST_LOG_DIR = SCRIPT_DIR + '/knowledge/_test_logs'
@@ -222,3 +223,21 @@ def get_code_from_source(client_info: dict) -> str:
         return ""
     method_body = get_method_by_line_no(source, int(client_info["line_no"]))
     return method_body if method_body else ""
+
+def open_pom_file(client_info: dict, downloads_dir=DOWNLOADS_DIR) -> None:
+    client_dir = f"{downloads_dir}/{client_info['client']}"
+    lib = client_info['lib']
+    for dir_path, subpaths, files in os.walk(client_dir):
+        for f in files:
+            if f == 'pom.xml':
+                pom_file = dir_path + '/' + f
+                group_id = lib.split(':')[0]
+                artifact_id = lib.split(':')[1]
+                fr = open(pom_file, 'r', encoding='utf-8')
+                lines = fr.readlines()
+                fr.close()
+                for i in range(len(lines)):
+                    if '<groupId>' + group_id + '</groupId>' in lines[i]:
+                        if '<artifactId>' + artifact_id + '</artifactId>' in lines[i + 1]:
+                            subprocess.Popen(["notepad.exe", pom_file])
+                            return

@@ -25,11 +25,7 @@
     "new": "1.5.1",
     "test": "ApolloMockServerSpringIntegrationTest#testPropertyInject",
     "submodule": "N/A",
-    "test_cmd": "N/A",
-    "exception": "java.lang.IllegalStateException",
-    "exception_info": "Failed to load ApplicationContext",
-    "file_name": "",
-    "line_no": ""
+    "test_cmd": "N/A"
   },
   {
     "id": "i-2",
@@ -123,7 +119,7 @@
     "submodule": "webmagic-saxon",
     "test_cmd": "N/A",
     "exception": "java.lang.AssertionError",
-    "exception_info": "XPath selector result should not be null",
+    "exception_info": "",
     "file_name": "XpathSelectorTest.java",
     "line_no": "1378"
   },
@@ -198,10 +194,10 @@
     "test": "PitMojoTest#testThrowsMojoFailureExceptionWhenCoverageBelowThreshold",
     "submodule": "N/A",
     "test_cmd": "N/A",
-    "exception": "java.lang.NoClassDefFoundError",
-    "exception_info": "com/google/inject/Module",
+    "exception": "java.lang.IllegalAccessError",
+    "exception_info": "tried to access field org.codehaus.plexus.PlexusTestCase.container from class org.apache.maven.plugin.testing.AbstractMojoTestCase",
     "file_name": "BasePitMojoTest.java",
-    "line_no": "61"
+    "line_no": "122"
   },
   {
     "id": "i-32",
@@ -455,7 +451,7 @@
     "submodule": "mockserver-core",
     "test_cmd": "N/A",
     "exception": "java.lang.AssertionError",
-    "exception_info": "Expected (an instance of java.lang.IllegalArgumentException and exception with message a string containing \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting ('true', 'false' or 'null')\\n at [Source (String)\\\"requestBytes\\\"; line 1, column 25]\")\n     but exception with message a string containing \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting ('true', 'false' or 'null')\\n at [Source (String)\\\"requestBytes\\\"; line 1, column 25]\" message was \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')",
+    "exception_info": "Expected (an instance of java.lang.IllegalArgumentException and exception with message a string containing \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source (String)\\\"requestBytes\\\"; line 1, column 25]\")\n     but exception with message a string containing \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')\\n at [Source (String)\\\"requestBytes\\\"; line 1, column 25]\" message was \"com.fasterxml.jackson.core.JsonParseException Unrecognized token 'requestBytes' was expecting (JSON String, Number, Array, Object or token 'null', 'true' or 'false')",
     "file_name": "HttpRequestSerializationErrorsTest.java",
     "line_no": "98"
   },

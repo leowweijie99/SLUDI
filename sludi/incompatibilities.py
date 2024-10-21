@@ -27,6 +27,7 @@ def run(id: str) -> None:
             if test_success:
                 print("Test successful!.")
                 return
+        # End of Discovery -------------------------------
         try:
             extract_info(client_info)
         except Exception as e:
@@ -39,20 +40,22 @@ def run(id: str) -> None:
             print(query)
             send_AI = input("Send to AI to diagnose and resolve this issue? (Y/N): ")
             if send_AI.strip() == "Y":
-                response = anthropic_service.query(query)
+                #query += f"\nthis occurred after upgrading {client_info['lib']} from {client_info['old']} to {client_info['new']}"
+                response = openai_service.query(query)
                 print('\n' + response)
-                subprocess.Popen(["notepad.exe", file_path])
+                if "pom.xml" in response:
+                    open_pom_file(client_info)
+                else:
+                    subprocess.Popen(["notepad.exe", file_path])
                 change_version = False
-                continue
-            else:
-                print(f"Please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
-                subprocess.Popen(["notepad.exe", file_path])
+            prompt = input("Enter prompt manually? (Y/N): ")
+            if prompt.strip() == "Y":
+                prompt = input("Prompt: ")
+                response = anthropic_service.query(prompt)
+                print('\n' + response)
         else:
             print(f"Unable to automatically extract information, please refer to {TEST_LOG_DIR}/{id}/test.log for details.")
-        prompt = input("Enter prompt manually or 'exit' to quit: ")
-        if prompt == "exit":
-            break   
-        print(f"Sending to AI: '{prompt}'!")
+            break
 
 
 def discover_client(client_info: dict) -> None:
@@ -115,15 +118,12 @@ def extract_info(client_info: dict) -> None:
         - Cause of the exception
         - Java file where the exception occurred
         - Line number where the exception occurred
-
     If any of the information cannot be extracted, the fields are set to an empty string ("").
-
     Args:
         client_info (dict): A dictionary containing details about a client's exception, such as error logs.
 
     Returns:
         None: This function modifies the 'client_info' dictionary in place and does not return any value.
-
     """
     print("Extracting Exception and Error Information...\n")
     client_info["exception"], client_info["exception_info"] = find_exception(client_info["id"])
